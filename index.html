@@ -9,8 +9,25 @@
     <title>Adobe hates him! (Poor Photoshop)</title>
 </head>
 <body>
-    <canvas id="editor" width="600" height="400"
+    <input type="file" id="">
+    <canvas id="editor" width="600" height="400">
+
+    </canvas>
+
+    <script type="text/javascript">
+    let c = document.getElementById("editor")
+    let ctx = c.getContext("2d")
     
-    ></canvas>
+    img = document.createElement('img')
+    img.src = imgURL
+    img.crossOrigin = "Anonymous"
+    img.addEventListener('load', function(e){
+        ctx.drawImage(e.target 0, 0, 600, 400)
+        starterImageData = ctx.getImageData(0, 0, 600, 400)
+    })
+    //brightness
+    //contrast
+    //saturation
+    </script>
 </body>
 </html>
