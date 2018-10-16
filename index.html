@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,26 +9,19 @@
 
     <title>Adobe hates him! (Poor Photoshop)</title>
 </head>
+
 <body>
-    <input type="file" id="">
-    <canvas id="editor" width="600" height="400">
+    <div id="container">
+        <canvas id="editor" width="600" height="400">
 
-    </canvas>
+        </canvas>
+        <input type="file" id="upload">
+        <p id="bright">Brightness</p>
+        <p id="cont">Contrast</p>
+        <p id="satu">Saturation</p>
 
-    <script type="text/javascript">
-    let c = document.getElementById("editor")
-    let ctx = c.getContext("2d")
-    
-    img = document.createElement('img')
-    img.src = imgURL
-    img.crossOrigin = "Anonymous"
-    img.addEventListener('load', function(e){
-        ctx.drawImage(e.target 0, 0, 600, 400)
-        starterImageData = ctx.getImageData(0, 0, 600, 400)
-    })
-    //brightness
-    //contrast
-    //saturation
-    </script>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
