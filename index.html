@@ -12,14 +12,15 @@
 
 <body>
     <div id="container">
-        <canvas id="editor" width="600" height="400">
+        <canvas id="canvas" width="600" height="400">
 
         </canvas>
-        <input type="file" id="upload">
-        <p id="bright">Brightness</p>
-        <p id="cont">Contrast</p>
-        <p id="satu">Saturation</p>
-
+        <div id="controls">
+            <input type="file" id="upload">
+            <input id="bright" class="slider" type="range" min="0" max="200" value="100" step="1">Brightness</p>
+            <input id="cont" class="slider" type="range" min="0" max="200" value="100" step="1">Contrast</p>
+            <input id="satu" class="slider" type="range" min="0" max="200" value="100" step="1">Saturation</p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

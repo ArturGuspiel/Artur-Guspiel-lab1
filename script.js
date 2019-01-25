@@ -1,22 +1,39 @@
-let c = document.getElementById("editor")
-let ctx = c.getContext("2d")
-let input = document.getElementById("upload")
-//let imgURL
-img = document.createElement('img')
-//img.src = imgURL
-img.crossOrigin = "Anonymous"
-img.addEventListener('load', function(e){
-    ctx.drawImage(e.target, 0, 0, 600, 400)
-    starterImageData = ctx.getImageData(0, 0, 600, 400)
-})
+let img = new Image();
+let canvas = {
+    init: function(){
+        this.canvas = document.querySelector("#canvas"),
+        this.ctx = this.canvas.getContext("2d")
+    }
+}
+canvas.init();
 
-document.querySelector("#upload").addEventListener('change', function(e){
-    console.log(e.target.files[0].name)
-    img.src = e.target.files[0].name
-})
+let fileinput = document.querySelector("#upload");
 
-    //loading image on canvas - V
-    //brightness - X
-    //contrast - X
-    //saturation - X
-    //atleast 1 brush - X
+fileinput.addEventListener('change', handleFiles);
+
+function handleFiles(e) {
+    img.onload = function() {
+        canvas.ctx.drawImage(img, 0, 0);
+    }
+    img.src = window.URL.createObjectURL(e.target.files[0]);
+}
+
+//let imageData = canvas.ctx.getImageData(0, 0, canvas.width, canvas.height)
+    
+let Brightness = 0;
+
+let rangeBrightness = document.querySelector("#bright");
+
+rangeBrightness.addEventListener('input', (e)=> (Brightness = e.target.value, handleFilters()));
+
+function handleFilters(){
+    canvas.ctx.filter = `brightness(${Brightness}%)`;
+    canvas.ctx.drawImage(img, 0, 0);
+
+}
+
+//loading image on canvas - V (revamped)
+//brightness - V
+//contrast - X
+//saturation - X
+//atleast 1 brush - X
