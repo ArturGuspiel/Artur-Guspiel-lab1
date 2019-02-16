@@ -4,20 +4,41 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Soundkit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
 </head>
 
 <body>
     <div id="container">
-        <section class="records">
+        <section class="record">
             <h1>Recording</h1>
             <div class="controls">
-                <button class="rec-btn" id="rec"></button>
-                <button class="play-btn" id="play"></button>
-                <button class="stop-btn" id="stop"></button>
+                <h4>Channel 1</h4>
+                <button class="rec-btn" id="rec1"><i class="fas fa-circle"></i></button>
+                <button class="play-btn" id="play1"><i class="fas fa-play"></i></button>
+                <button class="stop-btn" id="stop1"><i class="fas fa-square-full"></i></button>
+            </div>
+            <div class="controls">
+                <h4>Channel 2</h4>
+                <button class="rec-btn" id="rec2"><i class="fas fa-circle"></i></button>
+                <button class="play-btn" id="play2"><i class="fas fa-play"></i></button>
+                <button class="stop-btn" id="stop2"><i class="fas fa-square-full"></i></button>
+            </div>
+            <div class="controls">
+                <h4>Channel 3</h4>
+                <button class="rec-btn" id="rec3"><i class="fas fa-circle"></i></button>
+                <button class="play-btn" id="play3"><i class="fas fa-play"></i></button>
+                <button class="stop-btn" id="stop3"><i class="fas fa-square-full"></i></button>
+            </div>
+            <div class="controls">
+                <h4>Channel 4</h4>
+                <button class="rec-btn" id="rec4"><i class="fas fa-circle"></i></button>
+                <button class="play-btn" id="play4"><i class="fas fa-play"></i></button>
+                <button class="stop-btn" id="stop4"><i class="fas fa-square-full"></i></button>
             </div>
         </section>
         <div class="keys">
@@ -25,6 +46,12 @@
             <div class="key" id="w">W</div>
             <div class="key" id="e">E</div>
             <div class="key" id="r">R</div>
+        </div>
+        <div class="sounds">
+            <audio src="sounds/hihat.wav" class="clip" controls id="hihat"></audio>
+            <audio src="sounds/kick.wav" class="clip" controls id="kick"></audio>
+            <audio src="sounds/openhat.wav" class="clip" controls id="openhat"></audio>
+            <audio src="sounds/snare.wav" class="clip" controls id="snare"></audio>
         </div>
     </div>
 
