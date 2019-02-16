@@ -1,8 +1,10 @@
-* {
+body {
     font-family: 'Ubuntu', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color:#66FCF1;
+    background-color: #1F2833;
 }
 #container{
     height: 100%;
@@ -10,6 +12,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 50px;
 }
 .record{
     display: flex;
@@ -21,6 +24,7 @@
     width: 500px;
     padding: 10px;
     margin: 15px;
+    background-image: url('img/bg.png');
 }
 .controls>h4{
     display: flex;
@@ -45,12 +49,16 @@
     align-items: center;
 }
 .key{
+    display: flex;
     height: 50px;
     width: 50px;
-    background-color: gray;
+    background-color: #0B0C10;
     border: 1px solid #000000;
     margin: 0px 5px;
+    flex-direction: row;
     justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 .clip{
     visibility: hidden;
