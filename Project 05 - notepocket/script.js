@@ -8,6 +8,9 @@ const noteMaker = function() {
     let title = document.querySelector("#note-title");
     let text = document.querySelector("#note-text");
 
+    //Adding the date
+    const date = new Date();
+    const dateText = date.getDate() + '.' + (date.getMonth()+1) + '.' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes();
     
     //Creating the note itself
     let note = document.createElement("div");
@@ -18,12 +21,14 @@ const noteMaker = function() {
     note.appendChild(document.createElement("br"));
     note.appendChild(document.createTextNode(task));
     note.appendChild(document.createElement("br"));
+    note.appendChild(document.createElement("br"));
+    note.appendChild(document.createTextNode(dateText));
     text.appendChild(note);
 
     document.querySelector("#title").value = "";
     document.querySelector("#note").value = "";
 
-    //removing the note 
+    //Removing the note 
     note.onclick = removeBox;
 }
 
