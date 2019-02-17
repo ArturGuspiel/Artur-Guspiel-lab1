@@ -41,15 +41,13 @@ body {
     margin: 5px;
     margin-top: 100px;
 }
-#right-panel {
+#notes {
     width: 40%;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    box-shadow: -1px 0px 12px 0px rgba(0, 0, 0, 0.75);
-    background-image: url("../img/white-2484120.png");
     background-size: fill;
 }
 #notes .note{
