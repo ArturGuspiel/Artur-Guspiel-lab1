@@ -28,6 +28,21 @@ const noteMaker = function() {
     document.querySelector("#title").value = "";
     document.querySelector("#note").value = "";
 
+    //Colors of the notes
+    let color = document.querySelector("#colors").value;
+    if (color == "green") {
+        note.style.backgroundColor = "#05ad29";
+    }
+    else if(color == "yellow") {
+        note.style.backgroundColor = "#fbf012";
+    }
+    else if (color == "red") {
+        note.style.backgroundColor = "#f10b00";
+    }
+    else if (color == "blue") {
+        note.style.backgroundColor = "#099ad0";
+    }
+
     //Removing the note 
     note.onclick = removeBox;
 }
