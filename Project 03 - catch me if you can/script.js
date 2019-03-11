@@ -13,6 +13,7 @@ function getLocation(){
     }
 }
 
+//getting user position and setting the marker there
 function getUserPosition(pos) {
     userPosition = { lat: pos.coords.latitude, lng: pos.coords.longitude }
     map.panTo(userPosition);
@@ -21,6 +22,7 @@ function getUserPosition(pos) {
 
 getLocation(); 
 
+//moving the marker
 function movingMarker(position){
     marker.setMap(null);
     marker.setPosition({ lat: position.lat, lng: position.lng});
@@ -28,6 +30,7 @@ function movingMarker(position){
     map.panTo(position);
 }
 
+//drawing map on the page
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'),{
         zoom: 5,
@@ -42,6 +45,7 @@ function initMap() {
     });
 }
 
+//marker movement
 document.addEventListener("keydown", (e) => {
     let pos = marker.getPosition();
     let lat = pos.lat();
