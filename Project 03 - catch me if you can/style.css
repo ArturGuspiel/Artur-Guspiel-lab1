@@ -5,4 +5,18 @@ html, body {
 }
 #map {
     height: 100%;
+    z-index: 0;
+}
+#chat{
+    height: 350px;
+    width: 350px;
+    position: fixed;
+    bottom: 10px;
+    right: 75px;
+    border: 1px solid black;
+    background: #ffffff;
+    z-index: 1;
+}
+#text{
+    
 }
